@@ -1,65 +1,127 @@
-import Image from "next/image";
-
 export default function Home() {
+  const tools = [
+    { label: "Expert", text: "Adobe Illustrator (Vector Illustration, Logo Design, Iconography)" },
+    { label: "Proficient", text: "Adobe Photoshop (Photo Manipulation, Mockups), Adobe InDesign (Editorial Layout, Multi-page Typography)" },
+    { label: "Digital & Web", text: "Canva, Adobe Express, CapCut (Video Content), Basic Web Content Management" },
+    { label: "Strategic", text: "Brand Strategy, UI/UX Principles for Social Media, Digital Ad Design" },
+    { label: "Languages", text: "Portuguese (Fluent), English (Fluent), Spanish (Conversational)" },
+  ];
+
+  const experience = [
+    {
+      role: "Visual Identity & SEO Strategist",
+      org: "Cosmic Cake Studio (Etsy)",
+      date: "Nov 2025 – Present",
+      bullets: [
+        "Developed a comprehensive Brand Identity System, including primary/secondary logos, color palettes, and typography guidelines using Adobe Creative Suite.",
+        "Designed a full suite of physical and digital brand assets, including product packaging, professional \"Thank You\" inserts, and business cards for 70+ global orders.",
+        "Produced high-performing social media graphics and TikTok content, driving a total of 5,800+ shop visits through consistent visual storytelling.",
+        "Managed SEO-driven visual marketing to ensure all product images and ad assets were optimized for maximum search visibility and customer conversion.",
+      ],
+    },
+    {
+      role: "Brand Specialist & PR Lead (Startup)",
+      org: "Jetvoy.com",
+      date: "Aug 2025 – Present",
+      bullets: [
+        "Directed the visual standards for a Web3 travel startup, ensuring brand-aligned messaging across all digital ad campaigns and marketing collateral.",
+        "Supervised a team of 10 content creators, providing creative direction and quality control for all published visuals and graphics.",
+        "Represented the brand with professional marketing materials at major industry presentations including Oracle + AMD.",
+      ],
+    },
+    {
+      role: "Audio and Visual Technician",
+      org: "USF IT (Tampa, FL)",
+      date: "Aug 2023 – Present",
+      bullets: [
+        "Manage technical AV systems and digital displays in the University's high-pressure environment.",
+        "Ensure all visual assets and presentation hardware are calibrated for seamless, professional delivery to faculty and students.",
+      ],
+    },
+  ];
+
+  const projects = [
+    { name: "SkyMedi Drone Service", text: "Created a futuristic visual identity for a humanitarian tech concept, including logistics-focused logos and professional ad mockups." },
+    { name: "Editorial Layout (PCOS Power)", text: "Designed comprehensive magazine-style spreads using Canva and InDesign, balancing information with clean visual hierarchy." },
+    { name: "Glow & Tell Co", text: "Developed 360-degree branding for a skincare line, spanning product packaging, event posters, and email marketing templates." },
+  ];
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="max-w-3xl mx-auto bg-white text-gray-800">
+      <header className="bg-gray-900 text-white px-8 py-10">
+        <h1 className="text-4xl font-bold tracking-tight mb-2">Julia Thron Lobo</h1>
+        <p className="text-sm text-gray-300">Tampa, FL • jtlobowork@gmail.com</p>
+        <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-sm">
+          <a href="https://julialobo.abacusai.app" className="text-indigo-300 hover:text-indigo-200 underline">Design Portfolio</a>
+          <a href="https://linkedin.com/in/jtlobo/" className="text-indigo-300 hover:text-indigo-200 underline">LinkedIn</a>
+        </div>
+      </header>
+
+      <div className="px-8 py-8">
+        <section>
+          <h2 className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Summary</h2>
+          <p className="text-sm leading-relaxed text-gray-700">
+            Visual Designer and Advertising student focused on Brand Identity, Digital Layout, and Technical Illustration.
+            Experienced in creating high-impact assets for diverse industries, ranging from e-commerce brands to tech-driven logistics concepts.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+        </section>
+
+        <section className="border-t border-gray-200 pt-6 mt-6">
+          <h2 className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-3">Technical Design Tools</h2>
+          <ul className="space-y-2 text-sm text-gray-700">
+            {tools.map((t) => (
+              <li key={t.label} className="flex flex-col sm:flex-row sm:gap-2">
+                <span className="font-semibold text-gray-900 min-w-[110px]">{t.label}:</span>
+                <span>{t.text}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="border-t border-gray-200 pt-6 mt-6">
+          <h2 className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">Design & Creative Experience</h2>
+          <div className="space-y-6">
+            {experience.map((job) => (
+              <div key={job.org}>
+                <div className="flex flex-wrap justify-between items-baseline gap-x-3">
+                  <h3 className="text-base font-semibold text-gray-900">{job.role}</h3>
+                  <span className="text-xs text-gray-500">{job.date}</span>
+                </div>
+                <p className="text-sm font-medium text-indigo-700 mb-2">{job.org}</p>
+                <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700">
+                  {job.bullets.map((b, i) => <li key={i}>{b}</li>)}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="border-t border-gray-200 pt-6 mt-6">
+          <h2 className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">Key Design Projects</h2>
+          <div className="space-y-3">
+            {projects.map((p) => (
+              <div key={p.name}>
+                <h3 className="text-sm font-semibold text-gray-900">{p.name}</h3>
+                <p className="text-sm text-gray-700">{p.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="border-t border-gray-200 pt-6 mt-6">
+          <h2 className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Education</h2>
+          <div className="flex flex-wrap justify-between items-baseline gap-x-3">
+            <h3 className="text-base font-semibold text-gray-900">University of South Florida</h3>
+            <span className="text-xs text-gray-500">Expected Dec 2026 • GPA: 3.66</span>
+          </div>
+          <p className="text-sm text-gray-700">B.A.S. in Integrated Public Relations & Advertising</p>
+          <p className="text-sm text-gray-700">Minor in Business Analytics & Information Systems</p>
+        </section>
+      </div>
+
+      <footer className="border-t border-gray-200 px-8 py-6 text-center text-xs text-gray-400">
+        © 2026 Julia Thron Lobo • Built with Next.js & Tailwind CSS
+      </footer>
+    </main>
   );
 }
